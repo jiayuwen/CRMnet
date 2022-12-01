@@ -82,7 +82,7 @@ tf.data.experimental.save(val_dataset, os.path.join(saved_tf_dataset_path + "val
 # pbar.close()
 
 # ## preprocess raw data
-# ## pad sequence to 112 for TransUnet
+# ## pad sequence to 112 for CRMNet
 # pad_seq_list = tf.keras.preprocessing.sequence.pad_sequences(seq_list, maxlen=112, padding="post", truncating='post', dtype="str", value="N")
 
 # # save the data
