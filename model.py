@@ -7,7 +7,7 @@ from tensorflow.keras import Input
 
 
 def return_model(model_name):
-    model_dic={'trans_unet': Trans_UNet()}
+    model_dic={'crm_net': CRMnet()}
     return model_dic[model_name]
 
 class SqueezeExcitation1DLayer(tf.keras.Model):
@@ -116,7 +116,7 @@ def DecoderSeBlock(prev_layer_input, skip_layer_input, kernel_size=7, ratio=2, l
     return bn
 
 
-def Trans_UNet(input_size=(112, 5), n_filters=128, n_head=12, kernel_size=11, n_ff_dims=128, n_classes=1):
+def CRMnet(input_size=(112, 5), n_filters=128, n_head=12, kernel_size=11, n_ff_dims=128, n_classes=1):
     inputs = Input(input_size)
     max_len, vocab_size = input_size
     max_len = 14

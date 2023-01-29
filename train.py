@@ -12,7 +12,7 @@ def get_args():
     parser = argparse.ArgumentParser(description="Yeast_2022")
     parser.add_argument('-e', '--experiment_media', default='complex_media', type=str,
                         help='experiment media')
-    parser.add_argument('-m', '--models', default='trans_unet', type=str,
+    parser.add_argument('-m', '--models', default='crm_net', type=str,
                         help='model architecture')
     args = parser.parse_args()
     return args
