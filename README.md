@@ -22,16 +22,28 @@ This repository contains code for "CRMnet: a deep learning model for predicting 
 
             pip install -r requirements.txt
 
-- To download preprocessed data in tf.data.Dataset format (~250Gb):
-    1. The download link will updated soon
-    2. Copy the data to "./preprocessed_data/"
 
-- To download the orignal data and preprocess the data from scratch:
-    1. Download the orignal data from: https://zenodo.org/record/4436477#.Y4a_PS0RoUE
+- To download the original data and preprocess the data from scratch:
+    1. Download the original data from: https://zenodo.org/record/4436477#.Y4a_PS0RoUE
     2. Copy "complex_media_training_data_Glu.txt" to "./Yeast_Original_Data/"
     3. Preprocessed the data:
 
             python3 data_preprocessing.py
+            
+    4. The final dataset in tf.data.Dataset format is about 250GB
+
+- To download the preprocessed data:
+    1. Download the preprocessed data from: https://zenodo.org/record/7375243#.Y9W0iS0RoUG
+    2. Load the preprocessed data by using pickle:
+    
+            pad_seq_list = pickle.load(open(PATH+"seq_list", "rb"))
+            exp_list = pickle.load(open(PATH+"exp_list", "rb"))
+
+- To use the trained model:
+    1. Download the model weight from: https://zenodo.org/record/7375243#.Y9W0iS0RoUG
+    2. Load the trained model:
+    
+            model = tf.keras.models.load_model(PATH)
 
 - To train model from scratch: 
     1. on tpu v2-8 about 4 hours to converge:
