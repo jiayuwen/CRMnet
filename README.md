@@ -38,6 +38,8 @@ This repository contains code for "CRMnet: a deep learning model for predicting 
     
             pad_seq_list = pickle.load(open(PATH+"seq_list", "rb"))
             exp_list = pickle.load(open(PATH+"exp_list", "rb"))
+    
+    3. Follow the rest of the code from line 42 in data_preprocessing.py to generate the dataset.
 
 - To use the trained model:
     1. Download the model weight from: https://zenodo.org/record/7375243#.Y9W0iS0RoUG
