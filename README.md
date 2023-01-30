@@ -32,12 +32,6 @@ This repository contains code for "CRMnet: a deep learning model for predicting 
             
     4. The final dataset in tf.data.Dataset format is about 250GB
 
-- To download the preprocessed data:
-    1. Download the preprocessed data from: https://zenodo.org/record/7375243#.Y9W0iS0RoUG
-    2. Load the preprocessed data by using pickle:
-    
-            pad_seq_list = pickle.load(open(PATH+"seq_list", "rb"))
-            exp_list = pickle.load(open(PATH+"exp_list", "rb"))
 
 - To use the trained model:
     1. Download the model weight from: https://zenodo.org/record/7375243#.Y9W0iS0RoUG
